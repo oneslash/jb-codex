@@ -1,0 +1,38 @@
+# Gradle & Kotlin build output
+.gradle/
+build/
+*/build/
+.kotlin/
+
+# IntelliJ / JetBrains IDE metadata
+.intellijPlatform/
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Agent configs
+.agents/
+out/
+classes/
+cmake-build-*/
+
+# Run / debug artifacts
+hs_err_pid*
+replay_*.json
+*.hprof
+*.log
+*.tmp
+
+# OS-specific clutter
+.DS_Store
+Thumbs.db
+
+# Codex app-server runtime files
+codex-app-server.log
+codex-session.json
+
+# Generated archives & distributions
+*.zip
+*.tar
+*.tar.gz

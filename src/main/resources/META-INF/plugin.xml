@@ -1,0 +1,55 @@
+<idea-plugin>
+    <id>com.jetbrains.codex</id>
+    <name>Codex Plugin</name>
+    <version>0.1.0</version>
+    <vendor email="support@jetbrains.com" url="https://jetbrains.com">JetBrains</vendor>
+    
+    <description><![CDATA[
+        Integrates with the Codex app-server to run conversations, surface tool calls, and live-stream events.
+    ]]></description>
+    
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    
+    <extensions defaultExtensionNs="com.intellij">
+        <registryKey
+                key="gradle.compatibility.config.url"
+                defaultValue=""
+                overrides="true"
+                description="Disable Gradle/JVM compatibility updates to keep the sandbox on the built-in matrix"/>
+        <registryKey
+                key="gradle.compatibility.update.interval"
+                defaultValue="0"
+                overrides="true"
+                description="Ensure Gradle/JVM compatibility updates stay disabled inside the Codex sandbox"/>
+
+        <toolWindow
+            id="Codex"
+            anchor="right"
+            icon="AllIcons.General.Settings"
+            factoryClass="com.jetbrains.codex.ui.CodexToolWindowFactory"/>
+
+        <projectService serviceImplementation="com.jetbrains.codex.core.CodexService"/>
+        <projectService serviceImplementation="com.jetbrains.codex.settings.CodexSettings"/>
+
+        <projectConfigurable
+            parentId="tools"
+            instance="com.jetbrains.codex.settings.CodexSettingsConfigurable"
+            id="com.jetbrains.codex.settings"
+            displayName="Codex"
+            nonDefaultProject="true"/>
+    </extensions>
+    
+    <projectListeners>
+        <listener 
+            class="com.jetbrains.codex.core.CodexProjectListener" 
+            topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </projectListeners>
+</idea-plugin>
+
+
+
+
+
+
+
