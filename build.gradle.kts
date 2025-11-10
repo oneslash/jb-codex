@@ -41,7 +41,7 @@ intellijPlatform {
     buildSearchableOptions = false
 
     pluginConfiguration {
-        name = "Codex Plugin"
+        name = "JBCodex"
         version = project.version.toString()
         vendor {
             name = "JetBrains"
