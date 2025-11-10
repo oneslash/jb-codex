@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.jetbrains.codex</id>
-    <name>Codex Plugin</name>
+    <name>JBCodex</name>
     <version>0.1.0</version>
     <vendor email="support@jetbrains.com" url="https://jetbrains.com">JetBrains</vendor>
     
@@ -46,6 +46,8 @@
             topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </projectListeners>
 </idea-plugin>
+
+
 
 
 

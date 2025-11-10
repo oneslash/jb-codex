@@ -23,6 +23,7 @@ import com.intellij.ui.components.panels.VerticalLayout
 import com.intellij.util.IconUtil
 import com.intellij.util.execution.ParametersListUtil
 import com.intellij.util.ui.JBUI
+import com.intellij.ui.scale.JBUIScale
 import com.intellij.util.ui.UIUtil
 import com.jetbrains.codex.core.CodexService
 import com.jetbrains.codex.core.ServiceState
@@ -156,8 +157,8 @@ class CodexChatPanel(private val project: Project) : JBPanel<CodexChatPanel>(Bor
         borderPressed = JBColor(0xA8C4FF, 0x525A69)
     )
 
-    private val sendIcon: Icon = IconUtil.scale(AllIcons.General.ChevronUp, null, JBUI.scale(1.35f))
-    private val attachIcon: Icon = IconUtil.scale(AllIcons.General.Add, null, JBUI.scale(1.1f))
+    private val sendIcon: Icon = IconUtil.scale(AllIcons.General.ChevronUp, null, JBUIScale.scale(1.35f))
+    private val attachIcon: Icon = IconUtil.scale(AllIcons.General.Add, null, JBUIScale.scale(1.1f))
     private val abortIcon: Icon = AllIcons.Actions.Suspend
     private var composerActionState = ComposerActionState.SEND
     private val composerActionButton = object : JButton() {

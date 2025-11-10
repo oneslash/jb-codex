@@ -40,7 +40,7 @@ class CodexSettingsConfigurable(private val project: Project) : Configurable {
                 "Select Codex Binary",
                 "Choose the codex executable",
                 project,
-                FileChooserDescriptorFactory.createSingleFileDescriptor()
+                FileChooserDescriptorFactory.createSingleLocalFileDescriptor()
             )
         }
 
